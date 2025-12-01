@@ -339,9 +339,7 @@
             <p>${data.description}</p>
             <ol>${data.steps.map(s => `<li>${s}</li>`).join('')}</ol>
           </div>
-          <div class="modal-actions">
-            <button id="closeInner">Cerrar</button>
-          </div>
+         
         `;
         overlay.setAttribute('aria-hidden','false');
         overlay.classList.add('open');
