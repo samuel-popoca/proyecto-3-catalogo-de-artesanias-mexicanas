@@ -340,45 +340,46 @@ botonesAbrir.forEach(boton => {
 });
 
 
-// -------------------------------
-// CERRAR OVERLAY (BOTÓN, X Y CLIC FUERA)
-// -------------------------------
+// Apertura del overlay con contenido dinámico
+    const buttons = document.querySelectorAll('button[data-modal]');
+    const overlay = document.getElementById('overlay');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeOverlay');
 
-// Botones Cerrar / Cancelar dentro de cada overlay
-const botonesCerrar = document.querySelectorAll('.btn-cerrar');
-
-// Cerrar al presionar botón "Cerrar"
-botonesCerrar.forEach(boton => {
-    boton.addEventListener('click', () => {
-        const overlay = boton.closest('.overlay');
-        cerrarOverlay(overlay);
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-modal');
+        const data = procesos[key];
+        if (!data) return;
+        // Construir HTML del modal
+        modalBody.innerHTML = `
+          <h2>${data.title}</h2>
+          <img src="${data.image}" alt="${data.title}" />
+          <div class="process-desc">
+            <p>${data.description}</p>
+            <ol>${data.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+          </div>
+          <div class="modal-actions">
+            <button id="closeInner">Cerrar</button>
+          </div>
+        `;
+        overlay.setAttribute('aria-hidden','false');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('closeInner').focus();
+      });
     });
-});
 
-// Cerrar al presionar la “X”
-const botonesX = document.querySelectorAll('.close-overlay');
-
-botonesX.forEach(x => {
-    x.addEventListener('click', () => {
-        const overlay = x.closest('.overlay');
-        cerrarOverlay(overlay);
-    });
-});
-
-// Cerrar si se hace clic fuera del contenido
-overlays.forEach(overlay => {
+    function closeOverlay(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      modalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closeOverlay);
     overlay.addEventListener('click', (e) => {
-        if (e.target.classList.contains('overlay')) {
-            cerrarOverlay(overlay);
-        }
+      if (e.target === overlay) closeOverlay();
     });
-});
-
-// Función que cierra un overlay
-function cerrarOverlay(overlay) {
-    overlay.classList.remove('mostrar');
-    document.body.classList.remove('no-scroll');
-}
 
  
     // Close with Escape
