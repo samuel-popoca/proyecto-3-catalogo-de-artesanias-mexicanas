@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Artesanías Mexicanas — Proyecto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Catálogo de Artesanías Mexicanas</h1>
+    <p class="lead">10 piezas tradicionales.</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- CARD 1 -->
+    <article class="card">
+      <img src="img/alebrije.jpg" alt="Alebrije" />
+      <h2>Alebrijes</h2>
+      <p class="meta"><strong>Origen:</strong> Oaxaca — <strong>Creación aproximada:</strong> 1930s</p>
+      <p class="desc">Figuras fantásticas talladas en copal y pintadas con motivos muy detallados y colores vibrantes.</p>
+      <div class="actions">
+        <button data-modal="modal1">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card">
+      <img src="img/talavera.jpg" alt="Talavera" />
+      <h2>Talavera</h2>
+      <p class="meta"><strong>Origen:</strong> Puebla — <strong>Creación aproximada:</strong> Siglo XVI</p>
+      <p class="desc">Cerámica vidriada con patrones en azul, amarillo y negro sobre fondo blanco, con quema tradicional.</p>
+      <div class="actions">
+        <button data-modal="modal2">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card">
+      <img src="img/rebozo.jpg" alt="Rebozo" />
+      <h2>Rebozo</h2>
+      <p class="meta"><strong>Origen:</strong> Varias regiones (Estado de México, Puebla) — <strong>Creación aproximada:</strong> Virreinato</p>
+      <p class="desc">Tejido largo usado como prenda y para cargar bebés; presenta técnicas de telar de cintura y bordados.</p>
+      <div class="actions">
+        <button data-modal="modal3">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card">
+      <img src="img/barro_negro.jpg" alt="Barro negro" />
+      <h2>Barro Negro</h2>
+      <p class="meta"><strong>Origen:</strong> Oaxaca (San Bartolo Coyotepec) — <strong>Creación aproximada:</strong> Prehispánico / Tradición oral</p>
+      <p class="desc">Cerámica con acabado negro brillante logrado por técnicas de pulido y cocción reductiva.</p>
+      <div class="actions">
+        <button data-modal="modal4">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card">
+      <img src="img/huipil.jpg" alt="Huipil" />
+      <h2>Huipil</h2>
+      <p class="meta"><strong>Origen:</strong> Mesoamérica (varias etnias) — <strong>Creación aproximada:</strong> Prehispánico</p>
+      <p class="desc">Túnica tradicional tejida en telar de cintura, con iconografía simbólica bordada a mano.</p>
+      <div class="actions">
+        <button data-modal="modal5">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="card">
+      <img src="img/mata_ortiz.jpg" alt="Mata Ortiz" />
+      <h2>Mata Ortiz</h2>
+      <p class="meta"><strong>Origen:</strong> Chihuahua — <strong>Creación aproximada:</strong> Reinvención contemporánea, 1960s-1970s</p>
+      <p class="desc">Cerámica de estilo Paquimé con superficies pulidas y pinturas geométricas finas.</p>
+      <div class="actions">
+        <button data-modal="modal6">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 7 -->
+    <article class="card">
+      <img src="img/olinala.jpg" alt="Olinalá" />
+      <h2>Olinalá (Laca)</h2>
+      <p class="meta"><strong>Origen:</strong> Guerrero (Olinalá) — <strong>Creación aproximada:</strong> Época colonial / evolución local</p>
+      <p class="desc">Cajas y objetos de madera cubiertos con laca y decorados con pan de oro y motivos finos.</p>
+      <div class="actions">
+        <button data-modal="modal7">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 8 -->
+    <article class="card">
+      <img src="img/talabarteria.jpg" alt="Talabartería" />
+      <h2>Talabartería</h2>
+      <p class="meta"><strong>Origen:</strong> Nacional (fuerte tradición en Jalisco, Guanajuato) — <strong>Creación aproximada:</strong> Siglo XVI</p>
+      <p class="desc">Trabajo en cuero para sillas, cinturones y bota, con técnicas de costura, repujado y teñido.</p>
+      <div class="actions">
+        <button data-modal="modal8">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 9 -->
+    <article class="card">
+      <img src="img/cesteria.jpg" alt="Cestería" />
+      <h2>Cestería en palma</h2>
+      <p class="meta"><strong>Origen:</strong> Varias regiones (Yucatán, Michoacán) — <strong>Creación aproximada:</strong> Prehispánico</p>
+      <p class="desc">Tejidos utilitarios hechos con fibras de palma, carrizo o tule; técnicas de trenzado y ensamblado.</p>
+      <div class="actions">
+        <button data-modal="modal9">Proceso técnico</button>
+      </div>
+    </article>
+
+    <!-- CARD 10 -->
+    <article class="card">
+      <img src="img/tenango.jpg" alt="Bordado Tenango" />
+      <h2>Bordado Tenango</h2>
+      <p class="meta"><strong>Origen:</strong> Hidalgo (Tenango de Doria) — <strong>Creación aproximada:</strong> Siglo XX (popularizado)</p>
+      <p class="desc">Bordado colorido con motivos zoomorfos y geométricos sobre telas de algodón.</p>
+      <div class="actions">
+        <button data-modal="modal10">Proceso técnico</button>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- OVERLAY / MODALES (10) -->
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="overlay-content" role="dialog" aria-modal="true">
+      <button id="closeOverlay" class="close">×</button>
+      <div id="modalBody" class="modal-body">
+        <!-- Contenido dinámico cargado por JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Datos detallados de los procesos técnicos (10). Modifique rutas de imágenes en el HTML a su carpeta "img".
+    const procesos = {
+      modal1: {
+        title: 'Alebrijes — Proceso técnico detallado',
+        image: 'img/alebrije_proceso.jpg',
+        steps: [
+          '1) Selección y corte de la madera de copal: elegir piezas sin grietas, cortar a medida dejando margen para tallado.',
+          '2) Secado controlado: dejar la pieza en sombra ventilada 2–6 semanas para evitar grietas; medir humedad con higrómetro.',
+          '3) (Tercer proceso) Tallado bruto: con gubias y cuchillos se descarta volumen sobrante y se define la silueta general.',
+          '4) (Cuarto proceso) Tallado fino y texturizado: usar gubias pequeñas y herramientas rotativas para definir detalles anatómicos y texturas; comprobar simetría constantemente.',
+          '5) Lijado progresivo: empezar con lija 80 y terminar en 320–400; limpiar residuos con brocha y paño húmedo.',
+          '6) Reparación de fisuras: aplicar resina natural o pegamento de carpintero en grietas finas; secar y lijar otra vez.',
+          '7) Aplicación de capa base (primer): sellador acrílico o base blanca para un color uniforme.',
+          '8) Pintado artístico: trabajar por secciones con acrílicos, usar pinceles de detalle para líneas finas y puntillismo; respetar motivos tradicionales o inventivos.',
+          '9) Barnizado final: barniz satinado o brillante en varias capas finas (2–4) con lijado entre capas si se desea ultra-suavidad.',
+          '10) Secado y curado final: dejar 48–72 horas en ambiente controlado antes de manipular o embalar.'
+        ],
+        description: 'Alebrijes tradicionales tallados en copal; la fase crítica es el tallado fino (pasos 3–4) que define la expresividad.'
+      },
+
+      modal2: {
+        title: 'Talavera — Proceso técnico detallado',
+        image: 'img/talavera_proceso.jpg',
+        steps: [
+          '1) Selección y preparación del barro: mezcla de caolín, sílice y arcilla local; homogeneizar y tamizar.',
+          '2) Desaireado y reposo: eliminar burbujas; reposar la masa en cámara húmeda 24–48 h.',
+          '3) (Tercer proceso) Modelado: torneado o moldeado a mano la pieza, mantener espesores y simetría.',
+          '4) (Cuarto proceso) Secado inicial y reparación: secado lento en sombra, corregir deformaciones con instrumentos húmedos.',
+          '5) Primera cocción (bizcocho): horneado a temperaturas medias (800–980 °C) para endurecer sin vitrificar.',
+          '6) Aplicación de cubierta blanca de engobe o barro de fondo: capa base que garantizará el tono de Talavera.',
+          '7) Pintado con óxidos y pigmentos: usar pinceles de cerda fina; diseños tradicionales en azul cobalto, amarillo y negro.',
+          '8) Esgrafiado o retoques: detalles finos y correcciones antes de la segunda cocción.',
+          '9) Esmaltado y segunda cocción: cubrir con esmalte transparente y cocer a temperaturas mayores (1000–1050 °C).',
+          '10) Inspección de calidad y marcado: verificar brillo, ausencia de fisuras y registrar procedencia si aplica.'
+        ],
+        description: 'La Talavera requiere control térmico riguroso; los pasos 3 y 4 son críticos para evitar deformaciones.'
+      },
+
+      modal3: {
+        title: 'Rebozo — Proceso técnico detallado',
+        image: 'img/rebozo_proceso.jpg',
+        steps: [
+          '1) Hilado de la fibra: algodón o seda hilados a mano o con rueca; regular grosor y torsión.',
+          '2) Teñido de los hilos (si aplica): método artesanal con tintes naturales o sintéticos; fijación del color con mordientes.',
+          '3) (Tercer proceso) Preparación del urdido: montar los hilos en el telar de cintura respetando la densidad de trama y urdimbre.',
+          '4) (Cuarto proceso) Tejido en telar de cintura: alternancia manual de lanzadera y batán para crear el tejido base; controlar tensión.',
+          '5) Incorporación de patrones: usar calados, bordados o telar de pedal para motivos tradicionales.',
+          '6) Terminados: remates manuales, flecos y empuntados para evitar deshilachado.',
+          '7) Lavado y estabilizado: lavar en agua fría si se usaron tintes; secar en sombra para fijar forma.',
+          '8) Planchado y acabado: planchado con vapor para homogeneizar tejido y realzar brillo natural.',
+          '9) Revisión de calidad: comprobar regularidad de tejido, nudos y consistencia de color.',
+          '10) Etiquetado y empaque: indicar procedencia y cuidados de lavado.'
+        ],
+        description: 'El control de tensión en el telar (paso 4) define la calidad final del rebozo.'
+      },
+
+      modal4: {
+        title: 'Barro Negro — Proceso técnico detallado',
+        image: 'img/barro_negro_proceso.jpg',
+        steps: [
+          '1) Selección y amasado del barro: limpiar impurezas, mezclar con agua hasta textura homogénea.',
+          '2) Reposo y desgasificado: dejar asentarse; batir para eliminar burbujas.',
+          '3) (Tercer proceso) Modelado: técnicas de torno o modelado manual; definir forma y paredes uniformes.',
+          '4) (Cuarto proceso) Pulido en seco: antes de la primera cocción, pulir con piedra o pedernal para compactar la superficie.',
+          '5) Primera cocción a baja temperatura: endurecer la pieza sin vitrificar completamente.',
+          '6) Pulido final con arena fina o piedra pómez: lograr el brillo mate previo a la oxidación.',
+          '7) Preparación para cocción reductiva: apilar piezas y controlar ventilación del horno para crear atmósfera reductiva (menos oxígeno).',
+          '8) Cocción reductiva: alcanzar temperaturas y condiciones que conviertan el color en negro por efecto químico en el óxido de hierro.',
+          '9) Enfriado controlado: evitar cambios bruscos para prevenir grietas; desahumar cuidadosamente.',
+          '10) Revisión y reparación menor: pulido final con cera si se desea mayor brillo.'
+        ],
+        description: 'El pulido antes y después de la cocción (pasos 4 y 6) y la cocción reductiva son esenciales para el acabado negro.'
+      },
+
+      modal5: {
+        title: 'Huipil — Proceso técnico detallado',
+        image: 'img/huipil_proceso.jpg',
+        steps: [
+          '1) Preparación del hilo: selección de algodón o lana, hilado y blanqueado si es necesario.',
+          '2) Diseño y planteamiento iconográfico: decidir símbolos, colores y disposición en cuerpo y hombros.',
+          '3) (Tercer proceso) Montaje del telar de cintura: anclaje, urdido y tensión para las piezas que serán tejidas en paneles.',
+          '4) (Cuarto proceso) Tejido: ejecución del diseño con pedal o manual; controlar repetición de motivos y densidad textil.',
+          '5) Incorporación de bordados: una vez tejido el panel, bordar a mano los detalles con punto de cruz, listón o punto de cadeneta.',
+          '6) Ensamblado de paneles: coser hombros y costados según corte tradicional.',
+          '7) Acabados: rematar bordes, añadir flecos o aplicaciones si aplica.',
+          '8) Lavado y curado: lavado suave para estabilizar color y textura.',
+          '9) Planchado y revisado: garantizar simetría y calidad del bordado.',
+          '10) Documentación: indicar iconografía y significado para preservar la tradición.'
+        ],
+        description: 'El montaje del telar y el tejido (pasos 3–4) determinan la fidelidad del patrón tradicional.'
+      },
+
+      modal6: {
+        title: 'Mata Ortiz — Proceso técnico detallado',
+        image: 'img/mata_ortiz_proceso.jpg',
+        steps: [
+          '1) Recolección y tamizado del barro local: separar partículas y homogeneizar la pasta.',
+          '2) Preparación de la pasta y desaireado: golpear y batir para expulsar aire.',
+          '3) (Tercer proceso) Modelado manual por enrollado de tiras (coil) o moldeado: dar forma con precisión de paredes delgadas.',
+          '4) (Cuarto proceso) Alisado y pulido con piedra y arena fina: lograr superficie lisa y compacta para el pintado.',
+          '5) Secado lento y uniforme: colocar en sombra ventilada para evitar grietas.',
+          '6) Primer quemado a baja temperatura (si se realiza) o deshidratación completa.',
+          '7) Pintado con pigmentos minerales y pinceles finos: diseños geométricos y naturales con altísimo detalle.',
+          '8) Sellado con capa fina de barniz natural o sintético si el artista lo desea.',
+          '9) Cocción final (según técnica individual): control de temperatura para fijar pigmentos.',
+          '10) Revisión, retoques y documentación del autor.'
+        ],
+        description: 'El alisado fino y el pintado con pinceles extremadamente delgados (pasos 4 y 7) son la firma de Mata Ortiz.'
+      },
+
+      modal7: {
+        title: 'Olinalá (laca) — Proceso técnico detallado',
+        image: 'img/olinala_proceso.jpg',
+        steps: [
+          '1) Selección de la madera: elegir pino o copal seco y sin nudos para cajas y objetos.',
+          '2) Corte y ensamblado: preparar paneles y unir con ensambladuras tradicionales.',
+          '3) (Tercer proceso) Lijado y alisado de superficies: dejar fibras muy finas para recibir la laca.',
+          '4) (Cuarto proceso) Aplicación de capas base de laca (goma-laca o laca natural): varias capas con lijados intermedios.',
+          '5) Decorado con pigmentos y pan de oro: motivos florales o geométricos pintados a mano y detalles en pan de oro si aplica.',
+          '6) Pulido y bruñido: conseguir un brillo profundo con pátinas y abrillantadores naturales.',
+          '7) Secado y curado prolongado: la laca requiere semanas para estabilizarse completamente.',
+          '8) Reparación de imperfecciones: retoques mínimos y microlijados.',
+          '9) Sellado final con cera natural si el artesano lo desea.',
+          '10) Embalaje y certificación de origen si corresponde.'
+        ],
+        description: 'La aplicación de capas de laca y el bruñido (pasos 4–6) determinan la calidad acústica y estética del objeto.'
+      },
+
+      modal8: {
+        title: 'Talabartería — Proceso técnico detallado',
+        image: 'img/talabarteria_proceso.jpg',
+        steps: [
+          '1) Selección del cuero: escoger piel con el grosor y calidad adecuados según uso.',
+          '2) Curtido y preparación: curtir si es necesario o acondicionar el cuero con aceites y tensores.',
+          '3) (Tercer proceso) Corte de piezas según patrón: precisión en moldes para sillas, cinturones o fundas.',
+          '4) (Cuarto proceso) Repujado y marcado: transferir diseño y repujar con herramientas de golpe y rodillos para dar relieve.',
+          '5) Perforado y cosido: coser a mano o con máquina según técnica tradicional; uso de puntadas reforzadas.',
+          '6) Teñido y acabado de bordes: tintes anilina o vegetales y sellado de cantos.',
+          '7) Colocación de herrajes: remaches, hebillas y accesorios metálicos soldados o remachados.',
+          '8) Revisión de resistencia y ergonomía: probar asiento y tensiones en piezas funcionales.',
+          '9) Acondicionamiento final: aceites, ceras y barnices para proteger la pieza.',
+          '10) Etiquetado del artesano y garantías si aplica.'
+        ],
+        description: 'El repujado y el cosido (pasos 4–5) entregan el carácter estético y la durabilidad.'
+      },
+
+      modal9: {
+        title: 'Cestería en palma — Proceso técnico detallado',
+        image: 'img/cesteria_proceso.jpg',
+        steps: [
+          '1) Recolección de palma o fibra: elegir hojas sanas y largas; curado para evitar pudrición.',
+          '2) Preparación de tiras: secado parcial y corte en tiras regulares, aplanado y suavizado.',
+          '3) (Tercer proceso) Diseño del trenzado base: establecer el núcleo y la dirección del tejido.',
+          '4) (Cuarto proceso) Tejido y refuerzos: técnicas de cruzado y espiral para estructuras resistentes; insertar asas si aplica.',
+          '5) Acabados de borde: remates con costuras o trenzados decorativos para evitar deshilachado.',
+          '6) Tratamientos de conservación: aplicar aceites o barnices naturales para proteger contra humedad.',
+          '7) Secado final y ajuste: comprobar tensiones y endpoints del tejido.',
+          '8) Decoración adicional: tintes, barnices o aplicaciones de cuero/metal.',
+          '9) Revisión funcional: comprobar capacidad de carga y ergonomía del asa.',
+          '10) Empaque y etiqueta de origen.'
+        ],
+        description: 'La planificación del trenzado (pasos 3–4) define la forma y resistencia del objeto final.'
+      },
+
+      modal10: {
+        title: 'Bordado Tenango — Proceso técnico detallado',
+        image: 'img/tenango_proceso.jpg',
+        steps: [
+          '1) Selección de tela: algodón o manta de buena calidad, tensada en bastidor si es necesario.',
+          '2) Bocetado del diseño: transferir motivos (animales, flores, geométricos) al tejido con tiza o plantilla.',
+          '3) (Tercer proceso) Costura base: realizar puntadas de contorno para fijar posición del diseño.',
+          '4) (Cuarto proceso) Relleno de motivos: punto de relleno, punto de cadeneta y punto de nudo para texturas; usar paleta de colores vibrantes.',
+          '5) Detalle y sombreado: aplicar puntadas pequeñas para crear dimensión y sombreado en motivos.',
+          '6) Remate de hilos y limpieza: asegurar nudos y esconder extremos en el reverso.',
+          '7) Lavado y planchado: fijar colores si se usaron tintes naturales; planchado suave para alisar.',
+          '8) Montaje en prenda o cuadro: coser bordado a la prenda final o montarlo para exposición.',
+          '9) Control de calidad: revisar densidad, uniformidad y fidelidad del diseño.',
+          '10) Documentación del motivo: anotar significado y técnica usada para preservación cultural.'
+        ],
+        description: 'El relleno y detalle de los motivos (pasos 4–5) otorgan la riqueza visual característica de Tenango.'
+      }
+    };
+
+    // Apertura del overlay con contenido dinámico
+    const buttons = document.querySelectorAll('button[data-modal]');
+    const overlay = document.getElementById('overlay');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.getElementById('closeOverlay');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-modal');
+        const data = procesos[key];
+        if (!data) return;
+        // Construir HTML del modal
+        modalBody.innerHTML = `
+          <h2>${data.title}</h2>
+          <img src="${data.image}" alt="${data.title}" />
+          <div class="process-desc">
+            <p>${data.description}</p>
+            <ol>${data.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+          </div>
+          <div class="modal-actions">
+            <button id="closeInner">Cerrar</button>
+          </div>
+        `;
+        overlay.setAttribute('aria-hidden','false');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('closeInner').focus();
+      });
+    });
+
+    function closeOverlay(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden','true');
+      modalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    // Close with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay();
+    });
+  </script>
+</body>
+</html>
+
+
+</body>
+</html>
+
+
+ </div> <!-- fin poster-contenido -->
+
+    <!-- Footer -->
+    <footer>
+      <p><em>Catálgo digital - Proyecto Humanos vs Humanidad</em></p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<!-- Footer -->
+    <footer>
+      <p><em>Catálogo digital - © 2025 SamuelCompanyX - Página creada con GitHub Pages</em></p>
+    </footer>
+  </div>
+</body>
+</html>
