@@ -319,48 +319,68 @@
         description: 'El relleno y detalle de los motivos (pasos 4–5) otorgan la riqueza visual característica de Tenango.'
       }
     };
+// -------------------------------
+// ABRIR OVERLAY (MODAL)
+// -------------------------------
 
-    // Apertura del overlay con contenido dinámico
-    const buttons = document.querySelectorAll('button[data-modal]');
-    const overlay = document.getElementById('overlay');
-    const modalBody = document.getElementById('modalBody');
-    const closeBtn = document.getElementById('closeOverlay');
+// Todos los botones que abren un modal
+const botonesAbrir = document.querySelectorAll('.btn-abrir');
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.getAttribute('data-modal');
-        const data = procesos[key];
-        if (!data) return;
-        // Construir HTML del modal
-        modalBody.innerHTML = `
-          <h2>${data.title}</h2>
-          <img src="${data.image}" alt="${data.title}" />
-          <div class="process-desc">
-            <p>${data.description}</p>
-            <ol>${data.steps.map(s => `<li>${s}</li>`).join('')}</ol>
-          </div>
-          <div class="modal-actions">
-            <button id="closeInner">Cerrar</button>
-          </div>
-        `;
-        overlay.setAttribute('aria-hidden','false');
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('closeInner').focus();
-      });
+// Todos los overlays (modales)
+const overlays = document.querySelectorAll('.overlay');
+
+// Abrir modal según el botón presionado
+botonesAbrir.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const idOverlay = boton.getAttribute('data-overlay'); 
+        const overlay = document.getElementById(idOverlay);
+        overlay.classList.add('mostrar');
+        document.body.classList.add('no-scroll');
     });
+});
 
-    function closeOverlay(){
-      overlay.classList.remove('open');
-      overlay.setAttribute('aria-hidden','true');
-      modalBody.innerHTML = '';
-      document.body.style.overflow = '';
-    }
-    closeBtn.addEventListener('click', closeOverlay);
+
+// -------------------------------
+// CERRAR OVERLAY (BOTÓN, X Y CLIC FUERA)
+// -------------------------------
+
+// Botones Cerrar / Cancelar dentro de cada overlay
+const botonesCerrar = document.querySelectorAll('.btn-cerrar');
+
+// Cerrar al presionar botón "Cerrar"
+botonesCerrar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const overlay = boton.closest('.overlay');
+        cerrarOverlay(overlay);
+    });
+});
+
+// Cerrar al presionar la “X”
+const botonesX = document.querySelectorAll('.close-overlay');
+
+botonesX.forEach(x => {
+    x.addEventListener('click', () => {
+        const overlay = x.closest('.overlay');
+        cerrarOverlay(overlay);
+    });
+});
+
+// Cerrar si se hace clic fuera del contenido
+overlays.forEach(overlay => {
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeOverlay();
+        if (e.target.classList.contains('overlay')) {
+            cerrarOverlay(overlay);
+        }
     });
+});
 
+// Función que cierra un overlay
+function cerrarOverlay(overlay) {
+    overlay.classList.remove('mostrar');
+    document.body.classList.remove('no-scroll');
+}
+
+ 
     // Close with Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay();
